@@ -58,7 +58,7 @@ def checkPort(commands,rootIP):
 
 def FindUserPort(userip):
     commands = ["do sh ip arp "+ userip + " | inc ARPA"]
-    rootIP = "10.1.0.4"
+    rootIP = ""
     cisco_router = {
         'device_type': 'cisco_ios',
         'ip': rootIP,
@@ -85,5 +85,5 @@ def FindUserPort(userip):
     rootIP=cdpPort(mac,cdpint,rootIP)
 
 
-ip = "10.1.28.166" #put the ip here
+ip = "" #put the ip here
 FindUserPort(ip)
